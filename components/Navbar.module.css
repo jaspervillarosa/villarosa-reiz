@@ -1,0 +1,60 @@
+/* Navbar.module.css */
+.navbar {
+    padding-block: 1.5rem;
+    
+  }
+  
+  .navbarList {
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+  }
+  
+  .navbarItem {
+    margin: 0 10px;
+    padding-inline: 5rem;
+    display: flex;
+    align-items: center;
+  }
+  .navbarItem:hover, .active {
+    background-color: lightgrey;
+    color: white;
+  }
+
+
+  .searchButton {
+    
+    border-radius: unset;
+    border: unset;
+    padding: unset;
+    padding-inline: 1rem;
+    font-family: unset;
+    background-color: white;
+    }
+
+    .searchButton:hover{
+    background-color: white;
+    }
+
+    .searchInput{
+        border-radius: 16px;
+        padding: 5px 10px;
+        border: 1px solid gray;
+        background-color: transparent;
+        
+    }
+
+    .searchInput:focus{
+        outline: none;
+    }
+
+    .navbara{
+        text-decoration: none;
+        color: black;
+    }
+
+    .searchBar{
+        margin-inline: 2rem;
+    }
+
+  

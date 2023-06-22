@@ -2,12 +2,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+  name: string;
+  region: string;
+  area:number;
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+
+  try{
+      const response = await fetch('https://restcountries.com/v2/all?fields=name,region,area')
+      const data = await response.json();
+      res.status(200).json(data)
+  }catch(e: any){
+    console.log(e)
+}
 }
